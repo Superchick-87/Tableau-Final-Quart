@@ -440,6 +440,7 @@ $competition = $_GET['competition'];
                         document.getElementById(`team2_qf${i + 1}-logo`).src = imgSrc2QF;
                     }
 
+
                     // Demi-finales et finale
                     for (let i = 4; i < rows.length; i++) {
                         const columns = rows[i];
@@ -464,6 +465,7 @@ $competition = $_GET['competition'];
                         document.getElementById(`team2_sf${i - 3}-logo`).src = imgSrc2SF;
                         updateFinal();
                         updateTeamImagesForFinal();
+                        updateSemiFinals();
                     }
                 })
                 .catch(error => console.log('Erreur de chargement du fichier CSV :', error));
