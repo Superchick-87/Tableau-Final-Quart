@@ -464,7 +464,7 @@ $competition = $_GET['competition'];
                         document.getElementById(`team1_sf${i - 3}-logo`).src = imgSrc1SF;
                         document.getElementById(`team2_sf${i - 3}-logo`).src = imgSrc2SF;
                         updateFinal();
-                        updateTeamImagesForFinal();
+                        // updateTeamImagesForFinal();
                         updateSemiFinals();
                     }
                 })
@@ -601,8 +601,9 @@ $competition = $_GET['competition'];
             if (!isNaN(score1_sf1) && !isNaN(score2_sf1) && !isNaN(score1_sf2) && !isNaN(score2_sf2)) {
                 // Appeler la fonction pour mettre à jour la finale
                 updateFinal();
+                updateTeamImage();
             }
-            updateTeamImagesForFinal();
+            // updateTeamImagesForFinal();
         }
 
         // Fonction pour mettre à jour la finale en fonction des scores des demi-finales
@@ -671,6 +672,15 @@ $competition = $_GET['competition'];
             team2_sf1_logo.src = getImagePath(document.getElementById('team2_sf1').value, imagePath, defaultImage);
             team1_sf2_logo.src = getImagePath(document.getElementById('team1_sf2').value, imagePath, defaultImage);
             team2_sf2_logo.src = getImagePath(document.getElementById('team2_sf2').value, imagePath, defaultImage);
+       
+             // Récupérer les éléments des images d'équipes pour la finale
+             const team1_final_logo = document.getElementById('team1_final-logo');
+            const team2_final_logo = document.getElementById('team2_final-logo');
+
+            // Mettre à jour les images des équipes pour la finale
+            team1_final_logo.src = getImagePath(document.getElementById('team1_final').value, imagePath, defaultImage);
+            team2_final_logo.src = getImagePath(document.getElementById('team2_final').value, imagePath, defaultImage);
+       
         }
         // Fonction pour obtenir le chemin de l'image en vérifiant si elle existe
         function getImagePath(teamName, imagePath, defaultImage) {
