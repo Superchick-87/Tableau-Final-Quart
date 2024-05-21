@@ -137,7 +137,7 @@ function drawMatchCells($pdf, $x, $y, $width_team, $width_score, $height_cell, $
     $pdf->SetXY($x, $y + $height_cell + $space_y);
     $pdf->Cell($width_team, $height_cell, $match_data[4], $border, 0, 'L', 1, 1, 1, false, '', 'L');
     $pdf->SetXY($x + $width_team + $space_x, $y + $height_cell + $space_y);
-    $pdf->Cell($width_score, $height_cell, $match_data[6], $border, 0, 'L', 1, 1, 1, false, '', 'M');
+    $pdf->Cell($width_score, $height_cell, $match_data[5], $border, 0, 'L', 1, 1, 1, false, '', 'M');
     $pdf->Image(ImageRelace($match_data[4]), $x - 4.5, $y + $height_cell + $space_y, $imageWidth, $imageHeight, 'PNG', '', '', false, 300, 'M', false, false, 0, 'B', false, false);
 };
 
