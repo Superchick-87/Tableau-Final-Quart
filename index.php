@@ -193,6 +193,7 @@ $competition = $_GET['competition'];
     <div class="center">
         <img src="images/<?php echo ddc($competition); ?>.png" style="width: 110px; height: auto;">
     </div>
+</br>
     <h1>Tableau final</h1>
     <div class="container">
         <input type="text" id="competition" value='<?php echo $competition; ?>' style="display:none;">
